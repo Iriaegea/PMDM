@@ -3,7 +3,7 @@ void main(List<String> args) {
   var idade = 22;
   nome = 22;
   // Dart tiene inferencia de datos, con lo que ya presupone que nome es un string, por eso no acepta darle un valor int
-  idade = "Iria"
+  idade = "Iria";
   // Ocurre lo mismo, como ya presupone que edad es un número, no acepta asignarle otro tipo de valor.
 
 }
