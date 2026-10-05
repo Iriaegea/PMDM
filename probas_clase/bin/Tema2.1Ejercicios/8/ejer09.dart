@@ -6,22 +6,29 @@ Proba con sumar e restar.
 
 
 // solución 1: (creando funciones normalels fuera del main)
-aplicar ({required int x, required int y, required Function (int, int) op}){
-  return op(x,y);
-}
+int aplicar ({required int x, required int y, required int Function (int, int) op}) => op(x,y);
 
-sumar (int x, int y ) {
-  return x + y;
-}
 
-restar (int x, int y){
-  return x-y;
-}
+int sumar (int x, int y ) => x + y; // tiene q ser del mismo tipo q la fucion op
+
+
+int restar (int x, int y)=>  x-y;
+
 
 void main(List<String> args) {
-  print(aplicar(x: 1, y: 2, op: sumar));
+  int resultado = aplicar(x: 1, y: 2, op: sumar);
+  print(resultado);
 
+  int resultado2 = aplicar(x: 1, y: 2, op: (int x,int y) => x-y);
+  print(resultado2);
+ 
 }
+
+
+
+
+
+
 
 // solucion 2: (con funciones flecha)
 
